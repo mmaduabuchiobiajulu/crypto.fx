@@ -1,0 +1,331 @@
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <!--  // Font Awesome CDN-->
+    <!-- Bootstrap CSS -->
+      <link rel="shortcut icon" type="images/png" href="{% static 'images/favicon.jpg' %}"/>
+    <title>ECOSTONES_FX | HOME OF FINANCIAL GROWTH</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/css/bootstrap.min.css" rel="stylesheet">
+    l
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .form-icon {
+            position: absolute;
+            z-index: 2;
+            display: block;
+            width: 2.375rem;
+            height: 2.375rem;
+            line-height: 2.375rem;
+            text-align: center;
+            pointer-events: none;
+            color: #aaa;
+        }
+
+        .form-input-icon {
+            padding-left: 2.375rem;
+        }
+
+    </style>
+
+    <style>
+        body {
+            padding-top: 40px;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+        .container {
+            animation: fadeIn 1s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .success-icon {
+            font-size: 4rem;
+            color: #28a745;
+        }
+        .card {
+            box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+        }
+
+
+    </style>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+          integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="/static/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/assets/libs/css/style.css">
+    <link rel="stylesheet" href="/static/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+
+
+</head>
+
+<body>
+<!-- ============================================================== -->
+<!-- main wrapper -->
+<!-- ============================================================== -->
+<div class="dashboard-main-wrapper">
+    <!-- ============================================================== -->
+    <!-- navbar -->
+    <!-- ============================================================== -->
+    <div class="dashboard-header">
+        <nav class="navbar navbar-expand-lg bg-white fixed-top">
+            <a class="navbar-brand" href="/">
+               <img style="max-width:100px;" src="{% static 'images/logo.jpg' %}" alt="ECOSTONES_FX">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto navbar-right-top">
+                    <li class="nav-item dropdown nav-user show">
+                        <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="true"><img src="/media/true.jpg" alt=""
+                                                                          class="user-avatar-md rounded-circle"></a>
+                        <div class="dropdown-menu dropdown-menu-right nav-user-dropdown show"
+                             aria-labelledby="navbarDropdownMenuLink2">
+                            <div class="nav-user-info">
+                                <h5 class="mb-0 text-white nav-user-name">{{ user.username }}
+                                </h5>
+                                <span class="status"></span><span class="ml-2"> Avaiables </span>
+                            </div>
+                            <a class="dropdown-item" href="/user/profile"><i class="fas fa-user mr-2"></i>Account</a>
+                            <a class="dropdown-item" href="/user/update"><i class="fas fa-user mr-2"></i>Account Update</a>
+                            <a class="dropdown-item" href="/accounts/password/change/"><i class="fas fa-cog mr-2"></i>Change
+                                Password</a>
+                            <a class="dropdown-item" href="/accounts/logout/"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end navbar -->
+    <!-- ============================================================== -->
+
+
+    <div class="nav-left-sidebar sidebar-dark">
+        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+            <div class="menu-list" style="overflow: hidden; width: auto; height: 100%;">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="{% url 'dashboard' %}" aria-expanded="false"
+                                   data-target="#submenu-1" aria-controls="submenu-1"><i
+                                        class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'choose' %}" aria-expanded="false"
+                                   data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-solid fa-inbox"></i>Deposit</a>
+
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'apply_for_loan' %}" aria-expanded="false"
+                                   data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-solid fa-landmark"></i>Loan
+                                    application</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                   data-target="#submenu-5" aria-controls="submenu-5"><i class="fa-solid fa-cubes"></i>Select
+                                    Packages</a>
+                                <div id="submenu-5" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'choose' %}">Bronze Package</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'choose' %}">Silver Package</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'choose' %}">Gold Package</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'withdrawal_request' %}" aria-expanded="false" data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-solid fa-share"></i>Withdrawal
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'transaction_history' %}" aria-expanded="false" data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-solid fa-clock-rotate-left"></i> Transaction
+                                    history
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'notifications' %}" aria-expanded="false" data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-regular fa-user"></i>Account
+                                    notifications
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'contact' %}" aria-expanded="false" data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-solid fa-envelope"></i>Customer services
+                                </a>
+                            </li>
+
+
+                            <!--                            <li class="nav-item">-->
+                            <!--                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"-->
+                            <!--                                   data-target="#submenu-2" aria-controls="submenu-2"><i class="fa fa-fw fa-rocket"></i>UI-->
+                            <!--                                    Elements</a>-->
+                            <!--                                <div id="submenu-2" class="collapse submenu" style="">-->
+                            <!--                                </div>-->
+                            <!--                            </li>-->
+                            <!--                            <li class="nav-item ">-->
+                            <!--                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"-->
+                            <!--                                   data-target="#submenu-4" aria-controls="submenu-4"><i-->
+                            <!--                                        class="fab fa-fw fa-wpforms"></i>Forms</a>-->
+                            <!--                            </li>-->
+
+                            <li class="nav-divider">
+                                Features
+                            </li>
+                            <!--                            <li class="nav-item">-->
+                            <!--                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"-->
+                            <!--                                   data-target="#submenu-6" aria-controls="submenu-6"><i class="fa-brands fa-whatsapp"></i>-->
+                            <!--                                    Whatsapp </a>-->
+
+                            <!--                            </li>-->
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="https://wa.me/message/M4FC6O7RPB35N1" aria-expanded="false" data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-brands fa-whatsapp"></i>Whatsapp
+                                </a>
+                            </li>
+                          <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                   data-target="#submenu-6" aria-controls="submenu-6"><i class="fa-solid fa-bars"></i>Settings</a>
+                                <div id="submenu-6" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/profile">Account</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/update">Account Setting</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/accounts/password/change/">Change Password</a>
+                                        </li>
+                                         <li class="nav-item">
+                                            <a class="nav-link" href="/accounts/logout/">Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <!--                            <li class="nav-item">-->
+                            <!--                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"-->
+                            <!--                                   data-target="#submenu-7" aria-controls="submenu-7"><i-->
+                            <!--                                        class="fa-brands fa-app-store-ios"></i>Apps-->
+                            <!--                                    <span class="badge badge-secondary">New</span></a>-->
+
+                            <!--                            </li>-->
+                            <!--                            <li class="nav-item">-->
+                            <!--                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"-->
+                            <!--                                   data-target="#submenu-8" aria-controls="submenu-8"><i-->
+                            <!--                                        class="fas fa-fw fa-columns"></i>Icons</a>-->
+
+                            <!--                            </li>-->
+                            <!--                            <li class="nav-item">-->
+                            <!--                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"-->
+                            <!--                                   data-target="#submenu-10" aria-controls="submenu-10"><i-->
+                            <!--                                        class="fas fa-f fa-folder"></i>Menu-->
+                            <!--                                    Level</a>-->
+
+                            <!--                            </li>-->
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <br>
+            <br>
+            <div class="slimScrollBar"
+                 style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 654px;"></div>
+            <div class="slimScrollRail"
+                 style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+        </div>
+    </div>
+
+
+    <div class="dashboard-wrapper">
+        <div class="dashboard-influence">
+            <div class="container-fluid dashboard-content">
+
+                <!-- widgets   -->
+
+                <div class="container mt-5">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-header">
+                                    <h2 class="card-title">Deposit USD Coin</h2>
+                                </div>
+                                <div class="card-body">
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        {{ form.as_p }}
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- ============================================================== -->
+                <!-- end main wrapper  -->
+                <!-- ============================================================== -->
+                <!-- Optional JavaScript -->
+                <!-- jquery 3.3.1 -->
+                <script src="/static/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+                <!-- bootstap bundle js -->
+                <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+                <!-- slimscroll js -->
+                <script src="/static/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+                <!-- main js -->
+                <script src="/static/assets/libs/js/main-js.js"></script>
+                <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+                <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+
+            </div>
+</body>
+</html>
+
+
+

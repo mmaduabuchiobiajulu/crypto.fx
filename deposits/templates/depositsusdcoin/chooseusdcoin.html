@@ -1,0 +1,353 @@
+<html lang="en">
+{% load static %}
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <!--  // Font Awesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.0.0/css/all.css"
+          integrity="sha384-3B6NwesSXE7YJlcLI9RpRqGf2p/EgVH8BgoKTaUrmKNDkHPStTQ3EyoYjCGXaOTS" crossorigin="anonymous"/>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="/static/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/assets/libs/css/style.css">
+    <link rel="stylesheet" href="/static/assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <title>ECOSTONES_FX | HOME OF FINANCIAL GROWTH</title>
+    <link rel="shortcut icon" type="images/png" href="{% static 'images/favicon.jpg' %}"/>
+
+
+</head>
+
+<body>
+<!-- ============================================================== -->
+<!-- main wrapper -->
+<!-- ============================================================== -->
+<div class="dashboard-main-wrapper">
+    <!-- ============================================================== -->
+    <!-- navbar -->
+    <!-- ============================================================== -->
+    <div class="dashboard-header">
+        <nav class="navbar navbar-expand-lg bg-white fixed-top">
+            <a class="navbar-brand" href="index.html">
+                <img style="max-width:100px;" src="{% static 'images/logo.jpg' %}" alt="ECOSTONES_FX">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto navbar-right-top">
+                    <li class="nav-item dropdown nav-user show">
+                        <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="true"><img src="/media/true.jpg" alt=""
+                                                                          class="user-avatar-md rounded-circle"></a>
+                        <div class="dropdown-menu dropdown-menu-right nav-user-dropdown show"
+                             aria-labelledby="navbarDropdownMenuLink2">
+                            <div class="nav-user-info">
+                                <h5 class="mb-0 text-white nav-user-name">{{ user.username }}
+                                </h5>
+                                <span class="status"></span><span class="ml-2"> Avaiables </span>
+                            </div>
+                            <a class="dropdown-item" href="/user/profile"><i class="fas fa-user mr-2"></i>Account</a>
+                            <a class="dropdown-item" href="/user/update"><i class="fas fa-user mr-2"></i>Account Update</a>
+                            <a class="dropdown-item" href="/accounts/password/change/"><i class="fas fa-cog mr-2"></i>Change
+                                Password</a>
+                            <a class="dropdown-item" href="/accounts/logout/"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- ============================================================== -->
+    <!-- end navbar -->
+    <!-- ============================================================== -->
+
+
+    <div class="nav-left-sidebar sidebar-dark">
+        <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 100%;">
+            <div class="menu-list" style="overflow: hidden; width: auto; height: 100%;">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                Menu
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="{% url 'dashboard' %}" aria-expanded="false"
+                                   data-target="#submenu-1" aria-controls="submenu-1"><i
+                                        class="fa fa-fw fa-user-circle"></i>Dashboard</a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'choose' %}" aria-expanded="false"
+                                   data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-solid fa-inbox"></i>Deposit</a>
+
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'apply_for_loan' %}" aria-expanded="false"
+                                   data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-solid fa-landmark"></i>Loan
+                                    application</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                   data-target="#submenu-5" aria-controls="submenu-5"><i class="fa-solid fa-cubes"></i>Select
+                                    Packages</a>
+                                <div id="submenu-5" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'choose' %}">Bronze Package</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'choose' %}">Silver Package</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="{% url 'choose' %}">Gold Package</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'withdrawal_request' %}" aria-expanded="false"
+                                   data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-solid fa-share"></i>Withdrawal
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'transaction_history' %}" aria-expanded="false"
+                                   data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-solid fa-clock-rotate-left"></i> Transaction
+                                    history
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'notifications' %}" aria-expanded="false"
+                                   data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-regular fa-user"></i>Account
+                                    notifications
+                                </a>
+                            </li>
+
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{% url 'contact' %}" aria-expanded="false"
+                                   data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-solid fa-envelope"></i>Customer services
+                                </a>
+                            </li>
+
+
+                            <li class="nav-divider">
+                                Features
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link" href="https://wa.me/message/M4FC6O7RPB35N1" aria-expanded="false"
+                                   data-target="#submenu-1"
+                                   aria-controls="submenu-1"><i class="fa-brands fa-whatsapp"></i>Whatsapp
+                                </a>
+                            </li>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" data-toggle="collapse" aria-expanded="false"
+                                   data-target="#submenu-6" aria-controls="submenu-6"><i class="fa-solid fa-bars"></i>Settings</a>
+                                <div id="submenu-6" class="collapse submenu" style="">
+                                    <ul class="nav flex-column">
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/profile">Account</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/user/update">Account Setting</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/accounts/password/change/">Change Password</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a class="nav-link" href="/accounts/logout/">Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <br>
+            <br>
+            <div class="slimScrollBar"
+                 style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 654px;"></div>
+            <div class="slimScrollRail"
+                 style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div>
+        </div>
+    </div>
+
+
+    <div class="dashboard-wrapper">
+        <div class="dashboard-influence">
+            <div class="container-fluid dashboard-content">
+
+                <!-- widgets   -->
+                <!-- ============================================================== -->
+                <div class="row">
+                    <!-- ============================================================== -->
+                    <!-- four widgets   -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- total views   -->
+                    <!-- ============================================================== -->
+
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12">
+
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-inline-block">
+                                    <h2> BITCOIN <i class="fa-brands fa-btc"></i></h2>
+                                    <h2 class="mb-0" class="text-muted"></h2>
+                                    <a style="padding-left:30px; padding-right:30px; text-transform: capitalize; background-color:#0B60B0;  color:white;; mt-top: 10px; "
+                                       class="nav-link btn btn- btn-lg" href="{% url 'deposit_crypto' %}"> BTC</a>
+
+
+                                </div>
+                                <div class="float-right icon-circle-medium  icon-box-lg  bg-primary-light mt-1">
+                                    <i class="fa fa-money-bill-alt fa-fw fa-sm text-primary"></i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    </a>
+                    <!-- ============================================================== -->
+                    <!-- end total views   -->
+                    <!-- ============================================================== -->
+                    <!-- ============================================================== -->
+                    <!-- total followers   -->
+                    <!-- ============================================================== -->
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-inline-block">
+                                    <h2>ETHEREUM <i class="fa-brands fa-ethereum"></i></h2>
+                                    <h2 class="mb-0" class="text-muted">
+
+                                    </h2>
+                                    <a style="padding-left:30px; padding-right:30px; text-transform: capitalize; background-color:#0B60B0;  color:white;; mt-top: 10px; "
+                                       class="nav-link btn btn- btn-lg" href="{% url 'deposit_form_ethereum' %}"> ETH</a>
+                                </div>
+                                <div class="float-right icon-circle-medium  icon-box-lg  bg-primary-light mt-1">
+                                    <i class="fa fa-money-bill-alt fa-fw fa-sm text-primary"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-inline-block">
+                                    <h2> USD COIN <i class="fa-solid fa-dollar-sign"></i></h2>
+                                    <h2 class="mb-0" class="text-muted">
+
+                                    </h2>
+                                    <a style="padding-left:30px; padding-right:30px; text-transform: capitalize; background-color:#0B60B0;  color:white;; mt-top: 10px; "
+                                       class="nav-link btn btn- btn-lg" href="{% url 'deposit_form_usdcoin' %}"> USDC</a>
+                                </div>
+                                <div class="float-right icon-circle-medium  icon-box-lg  bg-primary-light mt-1">
+                                    <i class="fa fa-money-bill-alt fa-fw fa-sm text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-inline-block">
+                                    <h2> TETHER <i class="fa-solid fa-t"></i></h2>
+                                    <h2 class="mb-0" class="text-muted">
+
+                                    </h2>
+                                    <a style="padding-left:30px; padding-right:30px; text-transform: capitalize; background-color:#0B60B0;  color:white;; mt-top: 10px; "
+                                       class="nav-link btn btn- btn-lg" href="{% url 'deposit_form_tethert' %}"> USDT</a>
+                                </div>
+                                <div class="float-right icon-circle-medium  icon-box-lg  bg-primary-light mt-1">
+                                    <i class="fa fa-money-bill-alt fa-fw fa-sm text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-xl-12 col-lg-6 col-md-6 col-sm-12 col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-inline-block">
+                                    <h5 class="text-muted">As a savvy investor, you know the importance of using the
+                                        right tool for the job. When it comes to cryptocurrency deposits, using the
+                                        right wallet is crucial to ensure safe and successful transactions.
+                                        <br>
+
+                                        For Bitcoin deposits, use a Bitcoin wallet to take advantage of its secure and
+                                        decentralized architecture.
+                                        <br>
+
+
+                                        For Ethereum deposits, use an Ethereum wallet to access the smart contract
+                                        functionality and seamlessly interact with the Ethereum ecosystem.
+                                        <br>
+
+                                        For USD Coin deposits, use a USD Coin wallet to enjoy the stability and ease of
+                                        use of a fiat-pegged cryptocurrency.
+                                        <br>
+
+                                        For Tether deposits, use a Tether wallet to leverage the benefits of a
+                                        stablecoin pegged to the US dollar. <br>
+
+                                        Don't risk losing your funds or compromising your security by using the wrong
+                                        wallet. Choose the right wallet for each deposit and rest assured that your
+                                        investments are safe and secure.
+                                        <br></h5>
+                                    <!--                                    <h2 class="mb-0">-->
+                                    <!--                                        $2000-->
+                                    <!--                                    </h2>-->
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ============================================================== -->
+    <!-- end main wrapper  -->
+    <!-- ============================================================== -->
+    <!-- Optional JavaScript -->
+    <!-- jquery 3.3.1 -->
+    <script src="/static/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="/static/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="/static/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="/static/assets/libs/js/main-js.js"></script>
+
+
+</div>
+</body>
+</html>

@@ -1,0 +1,410 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="md-content">
+
+    <!-- hero -->
+    <hero class="hero" id="id1">
+        <!-- swiper swiper-container -->
+        <div class="swiper swiper-container">
+            <div class="swiper-wrapper">
+                <div class="hero__wrapper" style="background-image: url('{% static 'images/investment.jpg' %}');">
+
+
+                    <div class="hero__inner">
+                        <div class="container">
+                            <h1 class="hero__title">How to Master ECOSTONES_FX</h1>
+                            <p class="hero__desc">Welcome to the home of financial growth and endless possibilities.</p>
+
+                            {% if user.is_authenticated %}
+                            <!-- btn -->
+                            <a class="btn btn-primary" style="background-color:#0B60B0;  color:white;"
+                               href="{% url 'dashboard' %}">Dashboard
+                            </a><!-- End / btn -->
+                            <!-- btn -->
+                            <a class="btn btn-primary" style="background-color:#0B60B0;  color:white;"
+                               href="{% url 'account_logout' %}">Logout
+                            </a><!-- End / btn -->
+                            {% else %}
+                            <!-- btn -->
+                            <a class="btn btn-primary" href="{% url 'account_login' %}">Just Login
+                            </a><!-- End / btn -->
+                            <!-- btn -->
+                            <a class="btn btn-primary" href="{% url 'account_signup' %}">Signup
+                            </a><!-- End / btn -->
+                            {% endif %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- End / swiper swiper-container -->
+
+    </hero><!-- End / hero -->
+
+    <!-- cta-02 -->
+    <div class="cta-02">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 ">
+                    <h3 class="cta-02__title">Invest In The Right Place</h3>
+                </div>
+                <div class="col-lg-3  md-text-right">
+                    <!-- btn -->
+                    <a class="btn btn-primary" href="#id7">Get a quote</a>
+                    <!-- End / btn -->
+                </div>
+            </div>
+        </div>
+    </div><!-- End / cta-02 -->
+
+    <!-- Section -->
+    <section class="md-section" id="id2" style="background-color:#fff;padding:60px 0;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <div class="mb-30">
+
+                        <!-- sec-title -->
+                        <div class="sec-title sec-title__lg-title">
+                            <h2 class="sec-title__title">About <span>ECOSTONES_FX</span></h2><span
+                                class="sec-title__divider"></span>
+                        </div><!-- End / sec-title -->
+
+                        <p>
+                            Welcome to ECOSTONES_FX mining and real estate investment company, your trusted partner in
+                            real estate and mining investments. Our team of experienced professionals has a passion for
+                            helping individuals achieve their financial goals through smart and strategic investing.<br><br>
+
+                            With a combined experience of 20 years in the industry, we have developed a deep
+                            understanding of the real estate and mining sectors. Our expertise allows us to identify
+                            promising investment opportunities and guide our clients in making informed
+                            decisions.<br><br>
+
+                            At ECOSTONES_FX, we believe in transparency, integrity, and personalized service. We take
+                            the time to understand each client's unique needs and goals, tailoring our approach to meet
+                            their requirements. Whether you're a seasoned investor or just starting, we're committed to
+                            helping you achieve success.
+                        </p><br><br>Our mission is to empower individuals to build wealth and secure their financial
+                        futures through astute real estate and mining investments. Join us on this journey and discover
+                        the possibilities.
+                        <br><br>
+
+                        <a class="btn btn-primary btn-outline" href="#">More about us</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+
+                    <!-- about -->
+                    <div class="about"><img src="{% static 'images/about.jpg' %}" alt=""/>
+
+                        <!-- quote-02 -->
+                        <blockquote class="quote-02 about-quote">
+                            <p class="quote-02__text">Our goal here, is to make you rich. Our System is Plan and Simple
+                            </p>
+
+
+                            <!-- authorbox -->
+
+                            <div class="authorbox__info">
+                                <h5 class="authorbox__name">CEO</h5>
+                                <p class="authorbox__work">ECOSTONES_FX</p>
+                            </div>
+
+
+                        </blockquote><!-- End / quote-02 -->
+
+                    </div><!-- End / about -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End / Section -->
+
+    <!-- Section -->
+    <section class="md-section" id="id3">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 ">
+
+                    <!-- sec-title -->
+                    <div class="sec-title sec-title__lg-title md-text-center">
+                        <h2 class="sec-title__title">The Simple Operations</h2><span class="sec-title__divider"></span>
+                    </div><!-- End / sec-title -->
+
+                </div>
+            </div>
+            <div class="row row-eq-height">
+                <div class="col-sm-6 col-md-6 col-lg-4 ">
+
+                    <!-- services -->
+                    <div class="services">
+                        <div class="services__img"><img src="{% static 'img/service/1.png' %}" alt=""/></div>
+                        <h2 class="services__title"><a href="#">Register With Us</a></h2>
+                        <div class="services__desc">
+                            Enrollment is basic and free, utilise the signup button and fill the necessary information
+                            correctly.
+                            After the registration, you will be redirect to your costumised dashboard.
+                        </div>
+                    </div><!-- End / services -->
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4 ">
+
+                    <!-- services -->
+                    <div class="services">
+                        <div class="services__img"><img src="{% static 'img/service/2.jpg' %}" alt=""/></div>
+                        <h2 class="services__title"><a href="#">Select Your Package/Plan</a></h2>
+                        <div class="services__desc">From the list of our investment plans, choose a suitable investment
+                            package that suits your financial needs.
+                        </div>
+                    </div><!-- End / services -->
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4 ">
+
+                    <!-- services -->
+                    <div class="services">
+                        <div class="services__img"><img src="{% static 'img/service/3.png' %}" alt=""/></div>
+                        <h2 class="services__title"><a href="#">PH AND GH Auto System</a></h2>
+                        <div class="services__desc">Once you're set to Supply Help(PH),The framework consolidate you
+                            Consequently to your uplines. Whereas a downline will too be naturally blend to pay you
+                            within 24hours of your Giving offer assistance.
+                        </div>
+                    </div><!-- End / services -->
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4 ">
+
+                    <!-- services -->
+                    <div class="services">
+                        <div class="services__img"><img src="{% static 'img/service/4.png' %}" alt=""/></div>
+                        <h2 class="services__title"><a href="#">Referral Bonus For You</a></h2>
+                        <div class="services__desc">ECOSTONES_FX is exclusively free of referrals. In any case, you get
+                            10% of what ever speculation arrange your referrals select in for.
+                        </div>
+                    </div><!-- End / services -->
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4 ">
+
+                    <!-- services -->
+                    <div class="services">
+                        <div class="services__img"><img src="{% static 'img/service/5.png' %}" alt=""/></div>
+                        <h2 class="services__title"><a href="#">100% Return</a></h2>
+                        <div class="services__desc">Individuals qualified for GH will be matched in 78hours (3days). if
+                            you don't mind your coperation is required to keep the community developing..
+                        </div>
+                    </div><!-- End / services -->
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4 ">
+
+                    <!-- services -->
+                    <div class="services">
+                        <div class="services__img"><img src="{% static 'img/service/6.png' %}" alt=""/></div>
+                        <h2 class="services__title"><a href="#">24/7 Customer Service</a></h2>
+                        <div class="services__desc">Our admins can alwyas be gotten to any day, any time. You have any
+                            issues,
+                            Feel free to send a mail anytime, we are available 24/7.
+                        </div>
+                    </div><!-- End / services -->
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End / Section -->
+
+    <!-- Section -->
+    <section class="md-section" id="id4" style="background-color:#fff;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 ">
+
+                    <!-- sec-title -->
+                    <div class="sec-title sec-title__lg-title md-text-center">
+                        <h2 class="sec-title__title">Loan services</h2><span class="sec-title__divider"></span>
+                    </div><!-- End / sec-title -->
+
+                </div>
+            </div>
+
+            <!-- gallery-wrap -->
+            <div class="row row-eq-height">
+                <div class="col-sm-6 col-md-6 col-lg-6 ">
+
+                    <!-- services -->
+                    <div class="services">
+                        <div class="services__img"><img src="{% static 'images/loan.jpg' %}" alt=""/></div>
+                        <h2 class="services__title"><a href="#">Why you should choose ECOSTONES_FX</a></h2>
+                        <div class="services__desc">
+                            1. Personalized Solutions:
+
+                            At our loan service, we understand that every individual's financial situation is unique.
+                            That's why we offer personalized loan options tailored to meet your specific needs. Our
+                            experienced team will work with you to create a customized plan, ensuring you receive the
+                            right amount of funding at a competitive rate. <br><br>
+
+                            2. Streamlined Process:
+
+                            We know your time is valuable, which is why we've simplified the loan process to make it
+                            quick and easy. Our online application is straightforward, and our team will guide you
+                            through every step of the way. With our fast approval process, you'll have access to funds
+                            in no time.<br><br>
+
+                            3. Flexibility:
+
+                            Life is unpredictable, and financial needs can change. That's why our loan service offers
+                            flexible repayment terms, allowing you to adjust your payment schedule to suit your changing
+                            circumstances.<br><br>
+
+                            4. Competitive Rates:
+
+                            We strive to provide the most competitive interest rates in the market, ensuring you get the
+                            best possible deal. Our transparent pricing means no hidden fees or surprises, allowing you
+                            to budget with confidence.<br><br>
+
+                            5. Exceptional Customer Service:
+
+                            At our loan service, we prioritize your experience above all else. Our dedicated team is
+                            available to answer questions, address concerns, and provide support throughout the entire
+                            loan process.<br><br>
+
+
+                            Choosing our loan service means partnering with a trusted ally in your financial journey.
+                            With personalized solutions, a streamlined process, flexibility, competitive rates, and
+                            exceptional customer service, we empower you to take control of your finances and achieve
+                            your goals. Whether it's consolidating debt, funding a dream project, or covering unexpected
+                            expenses, we're here to help. Apply now and discover the power of financial freedom.
+                        </div>
+                    </div>
+                    <!-- End / services -->
+
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-6 ">
+
+                    <!-- services -->
+                    <div class="services">
+                        <h2 class="services__title"><a href="#">Why You Should Invest In Us</a></h2>
+                        <div class="services__desc">
+                            ECOSTONES_FX exceptional loan opportunity tailored to meet your financial needs!<br><br>
+                            Are you looking to expand your business, consolidate debt, or tackle a new project? Our loan
+                            option offers:<br><br>
+                            * Competitive interest rates<br><br>
+                            * Flexible repayment terms<br>
+                            * Streamlined application process
+                            <br><br>
+                            <h2>With our loan, you can:</h2><br>
+                            * Access funds up to $500,000<br><br>
+                            * Enjoy a fixed interest rate of 6.99% APR<br><br>
+                            Choose repayment terms that suit your needs (up to 5 years)
+
+
+                        </div>
+                    </div>
+                    <div class="services__img"><img src="{% static 'images/cloth.jpg' %}" alt=""/></div>
+                    <!-- End / services -->
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- End / Section -->
+
+    <!-- Section -->
+    <section class="md-section" id="id7">
+        <div class="row">
+            <div class="col-lg-8 col-xs-offset-0 col-sm-offset-0 col-md-offset-0 col-lg-offset-2 ">
+
+                <!-- sec-title -->
+                <div class="sec-title sec-title__lg-title md-text-center">
+                    <h2 class="sec-title__title">Contact us</h2><span class="sec-title__divider"></span>
+                </div><!-- End / sec-title -->
+
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9  col-lg-push-3">
+                    <div class="main-content">
+                        <div class="row">
+                            <div class="col-lg-9 ">
+                                <form class="contact-form">
+
+                                    <!-- form-item -->
+                                    <div class="form-item">
+                                        <input class="form-control" type="text" name="name" placeholder="name"/>
+                                    </div><!-- End / form-item -->
+
+                                    <!-- form-item -->
+                                    <div class="form-item">
+                                        <input class="form-control" type="text" name="email" placeholder="email"/>
+                                    </div><!-- End / form-item -->
+
+                                    <!-- form-item -->
+                                    <div class="form-item">
+                                        <input class="form-control" type="text" name="phone" placeholder="phone"/>
+                                    </div><!-- End / form-item -->
+
+                                    <!-- form-item -->
+                                    <div class="form-item">
+                                        <textarea name="message" placeholder="Message"
+                                                  style="height: 150px;"></textarea>
+                                    </div><!-- End / form-item -->
+
+                                    <button class="btn btn-primary btn-round mb-30" type="submit">Send message</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3  col-lg-pull-9">
+                    <div class="sidebar">
+
+                        <!-- widget -->
+                        <section class="widget">
+
+                            <!-- sec-title -->
+                            <div class="sec-title">
+                                <h2 class="sec-title__title">Working hours</h2><span class="sec-title__divider"></span>
+                            </div><!-- End / sec-title -->
+
+                            <p class="mb-30">We are Available 24/7, Send Us a Message</p>
+                            <!--  -->
+                            <div>
+                                <div class="widget-contact__item"><span class="widget-contact__title">Tel:</span>
+                                    <p class="widget-contact__text">
+                                        +1 (914) 294-3933</p>
+                                </div>
+                                <div class="widget-contact__item"><span class="widget-contact__title">email:</span>
+                                    <p class="widget-contact__text"><a href="#">
+                                        ecostonesfxworldwide@gmail.com
+                                    </a></p>
+                                </div>
+                                <div class="widget-contact__item"><span class="widget-contact__title">Working
+                                        Hours</span>
+                                    <p class="widget-contact__text">Mon - Sun: 24 Hours</p>
+                                </div>
+                            </div><!-- End /   -->
+
+                        </section><!-- End / widget -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End / Section -->
+
+</div>
+<!-- End / Content-->
+
+{% endblock content %}
